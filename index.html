@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EbookWorld - Premium Digital Books Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1 class="logo">EbookWorld</h1>
+            </div>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#featured" class="nav-link">Featured</a></li>
+                    <li><a href="#genres" class="nav-link">Genres</a></li>
+                    <li><a href="#trending" class="nav-link">Trending</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search books..." class="search-input">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 Cart (<span id="cartCount">0</span>)
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h2 class="hero-title animate-fade-in">Discover Your Next Great Read</h2>
+            <p class="hero-subtitle animate-fade-in-delay-1">Access thousands of premium ebooks from world-class authors</p>
+            <div class="hero-actions animate-fade-in-delay-2">
+                <button class="btn-primary" onclick="scrollToSection('featured')">Browse Collection</button>
+                <button class="btn-secondary">Start Free Trial</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Books -->
+    <section id="featured" class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">Featured Books</h3>
+                <p class="section-subtitle">Handpicked selections from our premium collection</p>
+            </div>
+            <div class="books-grid" id="featuredBooks">
+                <!-- Featured books will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Genres Section -->
+    <section id="genres" class="genres-section">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">Browse by Genre</h3>
+                <p class="section-subtitle">Find exactly what you're looking for</p>
+            </div>
+            <div class="genres-grid" id="genresGrid">
+                <!-- Genres will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Books -->
+    <section id="trending" class="trending-section">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">Trending Now</h3>
+                <p class="section-subtitle">Most popular books this week</p>
+            </div>
+            <div class="trending-carousel" id="trendingBooks">
+                <!-- Trending books will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h4>Shopping Cart</h4>
+            <button class="close-btn" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total: $<span id="cartTotal">0.00</span></span>
+            </div>
+            <button class="btn-primary checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div id="cartOverlay" class="cart-overlay" onclick="toggleCart()"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h4 class="footer-logo">EbookWorld</h4>
+                    <p>Your gateway to digital reading</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h5>Quick Links</h5>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#featured">Featured</a></li>
+                            <li><a href="#genres">Genres</a></li>
+                            <li><a href="#trending">Trending</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h5>Categories</h5>
+                        <ul>
+                            <li><a href="#genres">Fiction</a></li>
+                            <li><a href="#genres">Non-Fiction</a></li>
+                            <li><a href="#genres">Academic</a></li>
+                            <li><a href="#genres">Business</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h5>Support</h5>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EbookWorld. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
